@@ -8,7 +8,7 @@ CREATE TABLE role(
 	roleName VARCHAR(255) DEFAULT NULL -- '1:USER' / '2:TEACHER' / '3:ADMIN'
 );
 
-DROP TABLE role;
+-- DROP TABLE role;
 
 -- role 더미
 INSERT INTO role VALUES (DEFAULT, 'ADMIN'); -- 1
@@ -45,15 +45,18 @@ CREATE TABLE userRole(
 );
 
 -- userRole 더미
-INSERT INTO userrole VALUES(1, 1);
-INSERT INTO userrole VALUES(2, 5);
+INSERT INTO userRole VALUES(1, 1);
+INSERT INTO userRole VALUES(2, 5);
 DESC user_role;
 SELECT * FROM user_role;
 
 
 UPDATE user SET password='$2a$10$AmGZdqMKiNhpxtCd/z.tyuYL2r5rUmBCeFzzn4xZrwDYWHePyYiEa'; 
 
-
+-- 결제 테이블
+CREATE TABLE pay (
+	
+);
 
 
 

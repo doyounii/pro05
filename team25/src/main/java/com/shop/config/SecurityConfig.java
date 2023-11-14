@@ -1,5 +1,7 @@
 package com.shop.config;
 
+import com.shop.service.PayService;
+import com.shop.service.PayServiceImpl;
 import com.shop.service.ProductService;
 import com.shop.service.ProductServiceImpl;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
@@ -31,7 +33,8 @@ public class SecurityConfig {
         return new ProductServiceImpl();
     }
 
-
+    @Bean
+    public PayService payService() {return new PayServiceImpl();}
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         // 권한에 따라 허용하는 url 설정
