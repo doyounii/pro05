@@ -230,7 +230,7 @@
                             <span th:if="${isLiked}">
                                 <button href="javascript:void(0);" onclick="toggleLike()"
                                         th:data-product-id="${product.pno}" class="add-to-like-btn"
-                                        style="color: #ff5050; background-color:#15161D">♥ 찜</button>
+                                        style="color: #ff5050; background-color:#0f327d">♥ 찜</button>
                             </span>
 
 
@@ -255,7 +255,7 @@
 
                                 //alert(productNo  + id);
                                 $.ajax({
-                                    url: "/team25/product/productLike",
+                                    url: "/product/productLike",
                                     method: "POST",
                                     data: {
                                         pno: productNo,
@@ -267,7 +267,7 @@
                                         if (response.trim() === "liked") {
                                             alert("상품을 찜 했습니다.");
                                             likeButton.css("color","#ff5050");
-                                            likeButton.css("background-color","#15161D");
+                                            likeButton.css("background-color","#0f327d");
                                         } else if (response.trim() === "unliked") {
                                             alert("찜을 해제했습니다.");
                                             likeButton.css("background-color","#CCCCCC");

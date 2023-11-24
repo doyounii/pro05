@@ -127,7 +127,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "/team25/chat/readChat",
+                url: "/chat/readChat",
                 data: {message: response.data, user: username},
                 success: function (data) {
                 }
@@ -193,7 +193,7 @@
             // ws.send(jsonstr);
             $.ajax({
                 type: "POST",
-                url: "/team25/chat/insertChat",
+                url: "/chat/insertChat",
                 data: {message: jsonstr},
                 success: function (response) {
                     // 데이터베이스에 채팅이 제대로 저장된 경우에만 send

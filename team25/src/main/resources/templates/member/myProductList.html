@@ -590,7 +590,7 @@
         console.log( pno);
         $.ajax({
             type: 'get',
-            url: '/team25/product/updateStatus',
+            url: '/product/updateStatus',
             data: { pno: pno, status: selectedValue },
             success: function(response) {
                 console.log("Status updated successfully");
