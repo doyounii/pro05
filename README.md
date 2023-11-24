@@ -1,8 +1,6 @@
 # 천재교육 풀스택 과정 5차 프로젝트 
 <br/>
 
-![image](https://github.com/kuyejin/project5/assets/65212187/1e45a588-4e47-432c-89f8-e4bc5f8ad164)
-
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -26,8 +24,7 @@ T셀파몰 사이트에서 판매하거나 구매할 수 있습니다.  <br/>
 
 
 
-  # 👤 팀원 소개
-![image](https://github.com/kuyejin/project5/assets/65212187/e36fb3bc-0669-43e9-ada6-df982d4fbe20)
+  # 👤 개인프로젝크 5차 
 ​
 <br/>
 ​
