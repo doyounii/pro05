@@ -1,26 +1,20 @@
 package com.shop.config;
 
+import com.shop.service.ChatService;
+import com.shop.service.ChatServiceImpl;
 import com.shop.service.ProductService;
 import com.shop.service.ProductServiceImpl;
-import com.shop.service.UserService;
-import com.shop.service.UserServiceImpl;
-import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.core.session.SessionRegistry;
-import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.session.HttpSessionEventPublisher;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
-import java.util.Arrays;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.thymeleaf.extras.java8time.dialect.Java8TimeDialect;
 
 @Configuration
-public class WebConfig {
+public class WebConfig implements WebMvcConfigurer {
 
     @Bean
     public BCryptPasswordEncoder PasswordEncoder(){
@@ -28,15 +22,25 @@ public class WebConfig {
     }
 
     @Bean
-    public UserService userService() { return new UserServiceImpl(); }
-    @Bean
-    public ProductService productService() {
-        return new ProductServiceImpl();
+    public Java8TimeDialect java8TimeDialect() {
+        return new Java8TimeDialect();
     }
 
-    //@Bean
-    //public ProductService productService(){ return new ProductServiceImpl(); }
+    @Bean
+    public ProductService productService(){ return new ProductServiceImpl(); }
 
+
+    //개발  &  운영
+    @Value("${resource.path}")
+    private String resourcePath;
+
+    @Value("${upload.path}")
+    private String uploadPath;
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler(uploadPath).addResourceLocations(resourcePath);
+    }
 
     /*@Bean
     CorsConfigurationSource corsConfigurationSource() {
