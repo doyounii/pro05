@@ -1,4 +1,5 @@
-![class](https://github.com/doyounii/pro05/assets/49148640/8b111a05-7787-4559-a87e-8d71d6b6e96d)# 천재교육 풀스택 과정 5차 프로젝트 
+
+# 천재교육 풀스택 과정 5차 프로젝트 
 <br/>
 
 ![image](./산출물/화면구현/cover.png)
